@@ -198,7 +198,7 @@ docker network connect devtheanh-network spring-mysql
  docker run --network devtheanh-network --name spring-mysql -p 3309:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
 ```
 <h2>Run your application </h2>
-```
+
 theanh1301/myapp-service:0.9.0 - tên của container trên desktop
 
  
@@ -207,3 +207,32 @@ docker run --name myapp-service --network devtheanh-network -p 8080:8080 -e DATA
 ```
 
 
+Deloy railway
+
+```
+MYSQL_PUBLIC_URL
+mysql://root:OEPJlsWdquOPtudCRZIKrXfxXIGdeVEw@mainline.proxy.rlwy.net:48680/railway
+→ Đây là chuỗi kết nối public, bao gồm:
+
+User: root
+
+Password: OEPJlsWdquOPtudCRZIKrXfxXIGdeVEw
+
+Host: mainline.proxy.rlwy.net
+
+Port: 48680
+
+Database: railway
+```
+
+Fix lai application cho phu hop voi railway
+
+| Biến môi trường  | Giá trị cần có (dựa theo bạn cung cấp)               |
+| ---------------- | ---------------------------------------------------- |
+| `DATASOURCE_URL` | `jdbc:mysql://mainline.proxy.rlwy.net:48680/railway` |
+| `DB_USERNAME`    | `root`                                               |
+| `DB_PASSWORD`    | `OEPJlsWdquOPtudCRZIKrXfxXIGdeVEw`                   |
+| `SIGNERKEY`      | (Bạn đang dùng gì để JWT ký thì điền vào đây)        |
+
+
+![img_9.png](img_9.png)
