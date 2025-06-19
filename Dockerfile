@@ -18,6 +18,10 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 #Chỉ dẫn cho docker
 #Tương đương với câu lênh java -jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+#ENTRYPOINT ["java","-jar","app.jar"]  -> dung cho docker desktop
+
+#dùng java -jar app.jar mà không truyền -Dserver.port=$PORT, app của bạn sẽ chạy ở cổng 8080 mặc định → Railway không thể route request đúng → 404 hoặc connection refused.
+ENTRYPOINT ["sh", "-c", "java -Dserver.port=$PORT -jar app.jar"]
+
 
 
