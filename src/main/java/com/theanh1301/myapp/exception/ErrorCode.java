@@ -14,7 +14,7 @@ public enum ErrorCode {
     USERNAME_INVALID(1003,"Tên tài khoản không được nhỏ hơn {min} ký tự",HttpStatus.BAD_REQUEST),
     PASSWORD_INVALID(1004,"Mật khẩu không được nhỏ hơn {min} ký tự",HttpStatus.BAD_REQUEST),
     USER_NOT_EXISTS(1005,"User không tồn tại",HttpStatus.NOT_FOUND),
-    UNAUTHENTICATED(1006,"Không đăng nhập thành công",HttpStatus.UNAUTHORIZED),
+    UNAUTHENTICATED(1006,"Không có fetch đc API của tui đâu ní ơi :>>",HttpStatus.UNAUTHORIZED), /// Khong dang nhap thanh cong
     UNAUTHORIZED(1006,"Không có quyền thực hiện",HttpStatus.FORBIDDEN),
     INVALID_DOB(1007 ,"Bạn phải trên {min} tuổi ",HttpStatus.BAD_REQUEST);
 

@@ -236,3 +236,11 @@ Fix lai application cho phu hop voi railway
 
 
 ![img_9.png](img_9.png)
+
+neu muon dung co the sua ve / 
+
+server.servlet.context-path=/SpringBoot_SaleApp
+
+
+https://determined-passion-production.up.railway.app/SpringBoot_SaleApp/
+![img_10.png](img_10.png)
